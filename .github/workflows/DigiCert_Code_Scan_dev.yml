@@ -1,4 +1,4 @@
-# digicert-scan-template-version: 2
+# digicert-scan-template-version: 1
 name: DigiCert Code Scan dev
 
 on:
@@ -38,7 +38,7 @@ jobs:
       security-events: read
     steps:
       - if: inputs['registration-only'] != 'true'
-        uses: digicert/digicert-code-monitoring-action@master
+        uses: digicert/digicert-code-monitoring-action@13fd9be957f90f0f45812eaeb098c4c76edb23d5
         with:
           host: "https://washer-boozy-dreamless.ngrok-free.dev"
           api-key: ${{ secrets.DIGICERT_BACKEND_API_KEY }}
